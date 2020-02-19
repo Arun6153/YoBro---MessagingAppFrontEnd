@@ -1,0 +1,24 @@
+<div fxLayoutAlign="center center" fxFlexFill>
+<mat-card fxFlex="25" class="main-div">
+<mat-toolbar color="primary">
+  <span>REGISTER</span>
+</mat-toolbar>
+
+<form fxLayoutAlign="stretch" fxLayout="column" class="form" [formGroup]="signupForm" >
+  <mat-form-field>
+    <mat-label>Email</mat-label>
+    <input matInput type="Email" placeholder="Email" formControlName="email">
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Address</mat-label>
+    <input matInput type="Text" placeholder="Address" formControlName="address">
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Password</mat-label>
+    <input matInput type="Password" placeholder="Password" formControlName="password">
+  </mat-form-field>
+  <button mat-raised-button type="button" color="primary">Login</button>
+  <span style="margin:20px 40px 0px 40px;" routerLink="">Already a user? Click here to Signin.</span>
+</form>
+</mat-card>
+</div>
