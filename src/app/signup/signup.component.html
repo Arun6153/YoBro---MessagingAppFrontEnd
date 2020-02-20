@@ -4,20 +4,20 @@
   <span>REGISTER</span>
 </mat-toolbar>
 
-<form fxLayoutAlign="stretch" fxLayout="column" class="form" [formGroup]="signupForm" >
+<form fxLayoutAlign="stretch" fxLayout="column" class="form" >
   <mat-form-field>
     <mat-label>Email</mat-label>
-    <input matInput type="Email" placeholder="Email" formControlName="email">
+    <input matInput type="Email" placeholder="Email" name='Email' [(ngModel)]="register.email">
   </mat-form-field>
   <mat-form-field>
     <mat-label>Address</mat-label>
-    <input matInput type="Text" placeholder="Address" formControlName="address">
+    <input matInput type="Text" placeholder="Address" name='Address' [(ngModel)]="register.address">
   </mat-form-field>
   <mat-form-field>
     <mat-label>Password</mat-label>
-    <input matInput type="Password" placeholder="Password" formControlName="password">
+    <input matInput type="Password" placeholder="Password" name='Password' [(ngModel)]="register.password">
   </mat-form-field>
-  <button mat-raised-button type="button" color="primary">Login</button>
+  <button mat-raised-button (click)="signUp()" color="primary">Register</button>
   <span style="margin:20px 40px 0px 40px;" routerLink="">Already a user? Click here to Signin.</span>
 </form>
 </mat-card>
