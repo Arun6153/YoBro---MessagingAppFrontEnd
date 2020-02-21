@@ -19,14 +19,14 @@ export class LoginComponent implements OnInit {
     };
   }
   logging() {
-    console.log("in register");
+    console.log("in login");
     this.loginService.loginUser(this.login).subscribe(
       response => {
         console.log("In process");
-        alert(this.login.email + "'s account has been created.");
+        alert(this.login.email + "you are logging.");
+        window.location.href='http://127.0.0.1:4200/home'
       },
       error => console.log(error)
-
     );
   }
 }
