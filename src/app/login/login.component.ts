@@ -23,8 +23,8 @@ export class LoginComponent implements OnInit {
     this.loginService.loginUser(this.login).subscribe(
       response => {
         console.log("In process");
-        alert(this.login.email + "you are logging.");
-        window.location.href='http://127.0.0.1:4200/home'
+        alert(this.login.email + "'s Logged in.");
+        window.location.href='http://127.0.0.1:4200/home';
       },
       error => console.log(error)
     );
