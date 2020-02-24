@@ -3,7 +3,7 @@
 
   <mat-drawer class="side-left" mode="side" opened>
     <mat-toolbar color="primary" >
-        <span>Arun Saini</span>
+        <span>{{this.Auth.user_name()}}</span>
     </mat-toolbar>
     <div class="form">
     <mat-form-field fxFill >
@@ -13,12 +13,10 @@
     </div>
     <div>
             <mat-list role="list">
-                <mat-list-item role="listitem">Item 1</mat-list-item>
+            <div *ngFor="let user of users_data">
+                <mat-list-item role="listitem">{{user.name}}</mat-list-item>
                 <mat-divider></mat-divider>
-                <mat-list-item role="listitem">Item 2</mat-list-item>
-                <mat-divider></mat-divider>
-                <mat-list-item role="listitem">Item 3</mat-list-item>
-                <mat-divider></mat-divider>
+            </div>
             </mat-list>
     </div>
   </mat-drawer>

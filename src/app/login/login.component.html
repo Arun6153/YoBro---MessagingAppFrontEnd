@@ -13,6 +13,7 @@
     <mat-label>Password</mat-label>
     <input matInput type="Password" placeholder="Password" name="password" [(ngModel)]="login.password">
   </mat-form-field>
+  <p class="errorString">{{this.errorString}}</p>
   <button mat-raised-button (click)="logging()" color="primary">Login</button>
 <span style="margin:20px 50px 0px 50px;" routerLink="signup">New user? Click here to register.</span>
 </form>

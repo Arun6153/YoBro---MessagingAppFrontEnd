@@ -9,14 +9,22 @@
     <mat-label>Email</mat-label>
     <input matInput type="Email" placeholder="Email" name='Email' [(ngModel)]="register.email">
   </mat-form-field>
+
+  <mat-form-field>
+  <mat-label>Full Name</mat-label>
+    <input matInput type="FullName" placeholder="Enter your name" name='Name' [(ngModel)]="register.name">
+  </mat-form-field>
+
   <mat-form-field>
     <mat-label>Address</mat-label>
     <input matInput type="Text" placeholder="Address" name='Address' [(ngModel)]="register.address">
   </mat-form-field>
+
   <mat-form-field>
     <mat-label>Password</mat-label>
     <input matInput type="Password" placeholder="Password" name='Password' [(ngModel)]="register.password">
   </mat-form-field>
+  
   <button mat-raised-button (click)="signUp()" color="primary">Register</button>
   <span style="margin:20px 40px 0px 40px;" routerLink="">Already a user? Click here to Signin.</span>
 </form>

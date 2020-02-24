@@ -20,6 +20,7 @@ export class SignupComponent implements OnInit {
       email: "",
       password: "",
       address: "",
+      name:"",
     };
   }
   signUp() {
