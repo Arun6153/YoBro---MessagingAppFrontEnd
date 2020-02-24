@@ -9,6 +9,7 @@ import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { HomeComponent } from './home/home.component';
 import { RouterModule } from '@angular/router';
+import { ChatspaceComponent } from './chatspace/chatspace.component';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -29,6 +30,8 @@ import {MatDividerModule} from '@angular/material/divider';
     LoginComponent,
     SignupComponent,
     HomeComponent,
+    ChatspaceComponent,
+
   ],
   imports: [
     RouterModule,

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { HomeService } from './home.service';
 import { Authenticate } from '../components/auth';
+import { TransferOnly } from '../chatspace/chatspace.component';
 
 @Component({
   selector: 'app-home',
@@ -11,12 +12,17 @@ import { Authenticate } from '../components/auth';
 export class HomeComponent {
 
   Auth: Authenticate;
+  space: TransferOnly;
+
+  buddy_name: string;
+
   public users_data: any;
 
   constructor(private homeService: HomeService) {
     this.Auth = new Authenticate();
-    if(!this.Auth.check_user()) window.location.replace('http://127.0.0.1:4200/')
+    if (!this.Auth.check_user()) window.location.replace('http://127.0.0.1:4200/')
     this.fetch_users();
+    this.buddy_name = "Welcome to Yo!Bro";
   }
 
   fetch_users(): void {
@@ -24,15 +30,17 @@ export class HomeComponent {
     this.Auth = new Authenticate();
     this.Auth.set_data();
 
-    console.log(":in auth" + " " + this.Auth.user_id());
     this.homeService.updateHome(this.Auth.user_id()).subscribe(
       res => {
-        console.log(res);
         this.users_data = res.data;
-        console.log(this.users_data);
       },
       error => console.log(error)
     );
   }
 
+  TransferID(data) {
+    this.buddy_name = data.name;
+    this.space = new TransferOnly();
+    this.space.setID(data.id);
+  }
 }

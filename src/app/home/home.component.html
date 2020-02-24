@@ -13,8 +13,9 @@
     </div>
     <div>
             <mat-list role="list">
+            <mat-divider></mat-divider>
             <div *ngFor="let user of users_data">
-                <mat-list-item role="listitem">{{user.name}}</mat-list-item>
+                <mat-list-item class="name-title" (click)="TransferID(user)"  role="listitem">{{user.name}}</mat-list-item>
                 <mat-divider></mat-divider>
             </div>
             </mat-list>
@@ -23,8 +24,11 @@
 
   <mat-drawer-content class="side-right">
     <mat-toolbar color="primary">
-        <span>Channel @UdtaPunjab</span>
+        <span>{{buddy_name}}</span>
     </mat-toolbar>
+
+    <user-chat-space></user-chat-space>
+    
   </mat-drawer-content>
 
 </mat-drawer-container>
