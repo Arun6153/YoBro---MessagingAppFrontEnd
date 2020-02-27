@@ -5,3 +5,7 @@
   .form{
     padding:5%;
   }
+  .errorString{
+    color: red;
+    text-align: center;
+  }

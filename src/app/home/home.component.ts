@@ -43,4 +43,9 @@ export class HomeComponent {
     this.space = new TransferOnly();
     this.space.setID(data.id);
   }
+  takeTheWhoreOut()
+  {
+    localStorage.removeItem('logged_user');
+    window.location.replace('http://127.0.0.1:4200/');
+  }
 }

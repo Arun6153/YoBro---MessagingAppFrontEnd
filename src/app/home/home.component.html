@@ -11,7 +11,7 @@
         <input matInput type="text" placeholder="Search here" name="Search">
     </mat-form-field>
     </div>
-    <div>
+    <div class="div-all-people">
             <mat-list role="list">
             <mat-divider></mat-divider>
             <div *ngFor="let user of users_data">
@@ -20,6 +20,10 @@
             </div>
             </mat-list>
     </div>
+    <mat-divider></mat-divider>
+    <footer fxLayoutAlign="stretch" fxLayout="column" class="footer">
+      <button mat-raised-button (click)="takeTheWhoreOut()"  color="primary">Logout</button>
+    </footer>
   </mat-drawer>
 
   <mat-drawer-content class="side-right">

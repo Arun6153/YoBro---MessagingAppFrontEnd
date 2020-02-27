@@ -29,3 +29,14 @@
     color:white;
     text-transform: capitalize;
 }
+.footer{
+    width: 100%;
+    height: 7vh;
+    position: relative;
+    margin: auto;
+    padding: 13px 5px;
+}
+.div-all-people{
+    height: 64vh;
+    overflow-x: auto;
+}

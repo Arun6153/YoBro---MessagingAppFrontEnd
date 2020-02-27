@@ -4,8 +4,8 @@ this is the div for message
 <div>
 <div class="div-for-typing">
     <div class="div-message-input">
-        <input type="text" placeholder="Type your message here..." name="message">
-        <button class="btn-send" >SEND</button>
+        <input type="text" placeholder="Type your message here..." [(ngModel)]="sendMessage.mess_data" name="message">
+        <button class="btn-send" (click)='BringClickedUserData()'>SEND</button>
     <div>
 </div>
 </div>

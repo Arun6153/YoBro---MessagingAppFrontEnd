@@ -10,6 +10,7 @@ import { SignupService } from './signup.service';
 })
 export class SignupComponent implements OnInit {
   register;
+  errorString = "";
   constructor(private signupService: SignupService) { 
     console.log("in constructor");
   }
@@ -22,16 +23,21 @@ export class SignupComponent implements OnInit {
       address: "",
       name:"",
     };
+
   }
   signUp() {
     console.log("in register");
+    if(this.register.email!="" && this.register.password!="" && this.register.address!=""  && this.register.name!="")
+    {  
     this.signupService.signUpUser(this.register).subscribe(
-      response => {
-        console.log("In process");
-        alert(this.register.email + "'s account has been created.");
-      },
-      error => console.log(error)
-
+        response => {
+          alert("Your account is created.");
+        },
+        error => console.log(error)
     );
+    }
+    else{
+      this.errorString = "Enter all the fields correctly."
+    }
   }
 }
