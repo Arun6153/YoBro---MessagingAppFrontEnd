@@ -4,6 +4,7 @@
   <mat-drawer class="side-left" mode="side" opened>
     <mat-toolbar color="primary" >
         <span>{{this.Auth.user_name()}}</span>
+        <button class="btn-create-group" (click)="CreateGroup()"  matTooltip="Create Group" mat-mini-fab >+</button>
     </mat-toolbar>
     <div class="form">
     <mat-form-field fxFill >
@@ -25,14 +26,14 @@
       <button mat-raised-button (click)="takeTheWhoreOut()"  color="primary">Logout</button>
     </footer>
   </mat-drawer>
-
+  
   <mat-drawer-content class="side-right">
-    <mat-toolbar color="primary">
+    <mat-toolbar class="make-static" color="primary">
         <span>{{buddy_name}}</span>
     </mat-toolbar>
-
-    <user-chat-space></user-chat-space>
     
+    <user-chat-space *ngIf="chatActive"></user-chat-space>
+    <new-group-space *ngIf="newGroupActive"></new-group-space>
   </mat-drawer-content>
 
 </mat-drawer-container>

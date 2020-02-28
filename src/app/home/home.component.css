@@ -40,3 +40,10 @@
     height: 64vh;
     overflow-x: auto;
 }
+.btn-create-group{
+    margin-left: 230px;
+}
+.make-static{
+    position: fixed;
+    width: 65vw;
+}

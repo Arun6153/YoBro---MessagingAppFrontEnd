@@ -23,6 +23,8 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatListModule} from '@angular/material/list';
 import {MatDividerModule} from '@angular/material/divider';
+import {MatTooltipModule} from '@angular/material/tooltip';
+import { FormGroupComponent } from './form-group/form-group.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +33,7 @@ import {MatDividerModule} from '@angular/material/divider';
     SignupComponent,
     HomeComponent,
     ChatspaceComponent,
+    FormGroupComponent,
 
   ],
   imports: [
@@ -51,6 +54,7 @@ import {MatDividerModule} from '@angular/material/divider';
     MatSidenavModule,
     MatDividerModule,
     CommonModule,
+    MatTooltipModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

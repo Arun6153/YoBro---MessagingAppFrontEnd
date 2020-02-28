@@ -1,0 +1,11 @@
+.main-div{
+    padding: 0px;
+    width:380px;
+  }
+  .form{
+    padding:5%;
+  }
+  .errorString{
+    color: red;
+    text-align: center;
+  }

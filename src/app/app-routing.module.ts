@@ -4,6 +4,7 @@ import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { HomeComponent } from './home/home.component';
 import { ChatspaceComponent } from './chatspace/chatspace.component';
+import { FormGroupComponent } from './form-group/form-group.component';
 
 const routes: Routes = [
   {
@@ -22,6 +23,11 @@ const routes: Routes = [
     path:'chatspace',
     component:ChatspaceComponent
   },
+  {
+    path:'new-group',
+    component:FormGroupComponent
+  },
+
 ];
 
 @NgModule({
