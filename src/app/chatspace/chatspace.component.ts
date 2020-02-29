@@ -14,6 +14,9 @@ export class ChatspaceComponent implements OnInit{
   userLogged:Authenticate;
   sendMessage:any;
   private chatService:chatSpaceService;
+  isMember:boolean;
+  newMember:boolean;
+
   constructor() { }
 
   ngOnInit(){
@@ -22,6 +25,8 @@ export class ChatspaceComponent implements OnInit{
       second:null,
       message:"",
     };
+    this.isMember=false;
+    this.newMember=true;
   }
 
   setID(data: number) {
@@ -46,6 +51,10 @@ export class ChatspaceComponent implements OnInit{
         console.log(error)
       }
     );
+  }
+  goAddUser()
+  {
+    
   }
 }
 

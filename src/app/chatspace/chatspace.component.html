@@ -4,8 +4,9 @@ this is the div for message
 <div>
 <div class="div-for-typing">
     <div class="div-message-input">
-        <input type="text" placeholder="Type your message here..." [(ngModel)]="sendMessage.mess_data" name="message">
-        <button class="btn-send" (click)='BringClickedUserData()'>SEND</button>
+        <input  *ngIf="isMember" type="text" placeholder="Type your message here..." [(ngModel)]="sendMessage.mess_data" name="message">
+        <button *ngIf="isMember"  class="btn-send" (click)='BringClickedUserData()'>SEND</button>
+        <button *ngIf="newMember" class="btn-join"  mat-raised-button (click)='goAddUser()'>JOIN +</button>
     <div>
 </div>
 </div>

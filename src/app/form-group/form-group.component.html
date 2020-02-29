@@ -7,16 +7,16 @@
 <form fxLayoutAlign="stretch" fxLayout="column" class="form" >
   <mat-form-field>
     <mat-label>Group Name</mat-label>
-    <input matInput type="text" placeholder="Enter Group name here" name='group'>
+    <input matInput type="text" [(ngModel)]="group.name" placeholder="Enter Group name here" name='group'>
   </mat-form-field>
 
   <mat-form-field>
   <mat-label>Enter Tag</mat-label>
-    <input matInput type="text" placeholder="Tag to search group" name='tag' >
+    <input matInput type="text" [(ngModel)]="group.tag" placeholder="Tag to search group" name='tag' >
   </mat-form-field>
   
   <p class="errorString"></p>
-  <button mat-raised-button color="primary">Submit</button>
+  <button mat-raised-button (click)='createGroup()' color="primary">Submit</button>
 </form>
 </mat-card>
 </div>
